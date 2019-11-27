@@ -23,6 +23,7 @@ enable :sessions
   get '/attack' do
     @player_one_name = $player_one.name
     @player_two_name = $player_two.name
+    $player_two.take_damage
     erb :attack
   end
 
