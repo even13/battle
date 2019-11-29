@@ -9,10 +9,10 @@ let(:test_player) { Player.new("Eve") }
 
   context "hit points" do
     it "has an initial value of 100" do
-      expect(test_player.hit_points).to eq 100
+      expect(test_player.hit_points).to eq Player::DEFAULT_HP
     end
 
-    it "has hit points" do
+    it "can receive damage" do
       expect { test_player.take_damage }.to change { test_player.hit_points }.by(-10)
     end
   end
